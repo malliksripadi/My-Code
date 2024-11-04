@@ -1,0 +1,37 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--     <bean id="Laptop" class="com.SpringFramework1.Laptop" scope="prototype">  </bean> -->
+
+<!--    <property name="value" value="22" > </property>-->
+<!--    <property name="mob" ref="Mob_obj"> </property>-->
+
+    <bean id="Laptop" class="com.SpringFramework1.Laptop" autowire="byName" >
+
+
+<!--        <constructor-arg type="com.SpringFramework1.Mobile" ref="Mob_obj"/>-->
+<!--        <constructor-arg type="int" value="22"/>-->
+
+<!--        <constructor-arg name="value" value="22"/>-->
+<!--        <constructor-arg name="mob" ref="Mob_obj"/>-->
+
+<!--        <constructor-arg index="1" ref="Mob_obj"/>-->
+<!--        <constructor-arg index="0" value="31"/>-->
+
+        <!--    <property name="mob" ref="mob"> </property> Here the names are same so autowire byName-->
+        <!--   autowire byType refers to the type of bean it should look for like same object-->
+
+    </bean>
+
+
+    <bean id="Mob_obj" class="com.SpringFramework1.Mobile" primary="true">
+
+    </bean>
+
+    <bean id="Phone_obj" class="com.SpringFramework1.Phone" lazy-init="true" >
+
+    </bean>
+
+</beans>
